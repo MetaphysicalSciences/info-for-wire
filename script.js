@@ -6,13 +6,12 @@ doNotPushBtn.addEventListener('click', () => {
   // Show scary overlay
   scaryOverlay.classList.remove('hidden');
 
-  // Play sound
+  // Play sound from start
   scarySound.currentTime = 0;
   scarySound.play();
 
-  // After 5 seconds, hide overlay and pause sound
+  // Hide scary overlay after 5 seconds but DO NOT stop the sound
   setTimeout(() => {
     scaryOverlay.classList.add('hidden');
-    scarySound.pause();
   }, 5000);
 });
